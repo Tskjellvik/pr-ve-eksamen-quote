@@ -1,0 +1,55 @@
+nav {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  body {
+  }
+
+  #lbut {
+    float: right;
+    padding: 5px;
+  }
+
+  #rbut {
+    float: right;
+    padding: 5px;
+  }
+
+  .container {
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .post {
+    background-color: gainsboro;
+    margin: 20px;
+    padding: 5%;
+  }
+
+  h2 {
+    color: #333;
+  }
+
+  #myForm {
+    text-align: center;
+    margin: auto;
+    padding: 5%;
+    background-color: gainsboro;
+  }

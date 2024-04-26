@@ -1,0 +1,46 @@
+<%- include("./partials/head") %>
+<h1>Mpage</h1>
+
+<form id="myForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="enavn">Etternavn:</label>
+    <input type="text" id="enavn" name="name"><br><br>
+    <label for="uname">Username:</label>
+    <input type="text" id="uname" name="name"><br><br>
+    <label for="paswd">Password:</label>
+    <input type="password" id="paswd" name="name"><br><br>
+    <button type="submit">Submit</button>
+</form>
+
+
+<!-- <div  class="container">
+    <div class="post">
+        <p>post 1</p>
+    </div>
+    <div class="post">
+        <p>post 2</p>
+    </div>
+    <div class="post">
+        <p>post 3</p>
+    </div>
+    <div class="post">
+        <p>post 4</p>
+    </div>
+    <div class="post">
+        <p>post 5</p>
+    </div>    
+</div> -->
+
+<div class="wrapper">
+    <% for (person of result){ %>
+        <div class="person">
+            <p>post</p>
+            <h1><%= person.name %> <%= person.etternavn %></h1>
+            <h2><%= person.username %></h2>
+        </div>
+    <% }%>
+</div>
+
+
+<%- include("./partials/footer") %>
