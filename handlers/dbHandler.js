@@ -1,17 +1,21 @@
-const mongo = "mongodb+srv://gerty:Passord1@cluster0.gr4ywoq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const mongo = "mongodb://10.12.99.10:27017/?directConnection=true&appName=mongosh+2.2.5";
 const mongoose = require("mongoose");
-const people = require("../models/users")
+const user = require("../models/users")
 
 function connectToDb(cb){
     mongoose.connect(mongo, {dbName: 'users'})
     .then((result) => {
         if(result){
             console.log('Connected to the database');
-            // people.insertMany([
-            //     {name: "John Doe", age: 34},
-            //     {name: "John Deer", age: 40}])
+            
+            
+            // user.insertMany([
+            //     {name: "John", username: "snowcrash", etternavn: "Doe"},
+            //     {name: "John", username: "gerty", etternavn: "Deer"}])
             //     .then(()=>{console.log('Data inserted')})
             //     .catch((err)=>console.error(err))
+
+
             if(typeof cb === 'function'){
                 cb()
             }
@@ -24,9 +28,12 @@ function connectToDb(cb){
 }
 
 function perReg(cb){
-    people.find()
+    user.find({})
     .then((result)=>{
         cb(result)
+    })
+    .catch(error => {
+        console.log('error: ', error, '/n/n')
     })
 }
 

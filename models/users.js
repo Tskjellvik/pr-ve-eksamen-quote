@@ -8,6 +8,6 @@ const usersSchema = new Schema({
     etternavn: { type:String, require: true} 
 });
 
-const users = mongoose.model('users', usersSchema);
+const user = mongoose.model('user', usersSchema);
 
-module.exports = users
+module.exports = user
