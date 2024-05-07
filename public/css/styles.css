@@ -18,6 +18,11 @@ nav {
     text-decoration: none;
   }
 
+  a:hover {
+    color: #ccc; /* Change the color of the text on hover */
+    text-decoration: underline; /* Add an underline on hover */
+}
+
   body {
   }
 
@@ -52,4 +57,16 @@ nav {
     margin: auto;
     padding: 5%;
     background-color: gainsboro;
+  }
+
+  footer {
+    position: fixed; /* Pin the footer to the bottom of the page */
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    width: 100%; /* Make the footer full-width */
   }

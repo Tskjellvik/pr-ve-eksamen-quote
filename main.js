@@ -6,8 +6,11 @@ const dbHandler = require("./handlers/dbHandler");
 
 app.set("view engine", "ejs");
 
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
 app.use(express.static("public"));
 app.use(Router);
+
 
 app.listen(6969, () => {
   console.log("Server is running on port 6969");

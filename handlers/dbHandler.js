@@ -1,4 +1,4 @@
-const mongo = "mongodb://10.12.99.10:27017/?directConnection=true&appName=mongosh+2.2.5";
+const mongo = "mongodb://10.12.10.111:27017/?directConnection=true&appName=mongosh+2.2.3";
 const mongoose = require("mongoose");
 const user = require("../models/users")
 
@@ -27,17 +27,6 @@ function connectToDb(cb){
     })
 }
 
-function perReg(cb){
-    user.find({})
-    .then((result)=>{
-        cb(result)
-    })
-    .catch(error => {
-        console.log('error: ', error, '/n/n')
-    })
-}
-
 module.exports = {
     connectToDb,
-    perReg
 }
